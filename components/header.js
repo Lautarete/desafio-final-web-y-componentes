@@ -4,7 +4,10 @@ function completeHeaderOperation(domElToMount) {
       domElToMount,
       `
     <header class="header">
-        <img src="./several/logo.png" alt="" class="logo" />
+    <a href="./index.html">
+    <img src="./several/logo.png" alt="" class="logo" />
+    </a>
+          
         <button class="header__button">
           <div class="header__rc"></div>
           <div class="header__rc"></div>
@@ -19,9 +22,9 @@ function completeHeaderOperation(domElToMount) {
             />
           </button>
           <ul class="header__options-window-ul">
-            <a href="" class="header__options-window-link">Portfolio</a>
-            <a href="" class="header__options-window-link">Servicios</a>
-            <a href="" class="header__options-window-link">Contacto</a>
+            <a href="./portfolio.html" class="header__options-window-link">Portfolio</a>
+            <a href="./services.html" class="header__options-window-link">Servicios</a>
+            <a href="./contact.html" class="header__options-window-link">Contacto</a>
           </ul>
         </div>
       </header>

@@ -1,4 +1,4 @@
-function mountServicesJobs(domElToMount) {
+function mountServicesJobs(domElToMount, cardClass) {
   function createCard(apiResults) {
     const servicesJobsElHTML = `
   <div class="services-jobs__card">
@@ -42,14 +42,14 @@ function mountServicesJobs(domElToMount) {
     }
   }
 
-  function readApi() {
+  function readApi(cardClass) {
     const apiLink =
       "https://cdn.contentful.com/spaces/cmvsqfhv17x5/environments/master/entries?access_token=Iatas7cBmTOmab0Zdh4BTL3vFd5fTW3csveFmujnBtc";
 
     fetch(apiLink).then((r) => {
       r.json().then((r) => {
         const cardTexts = r.items.filter((item) => {
-          return item.fields.class == "services";
+          return item.fields.class == cardClass;
         });
         const cardImgArr = r.includes.Asset.filter((img) => {
           return img.fields.title.includes("card-img__");
@@ -75,5 +75,5 @@ function mountServicesJobs(domElToMount) {
     });
   }
 
-  readApi();
+  readApi(cardClass);
 }

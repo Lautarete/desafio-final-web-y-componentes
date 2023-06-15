@@ -7,7 +7,7 @@ function mountFooter(domElToMount) {
         <div class="footer__page-links-container">
           <ul class="footer__ul">
             <div class="footer__link-container">
-              <a href="" class="footer__a-page-link">
+              <a href="./index.html" class="footer__a-page-link">
                 <div class="footer__logo-container">
                   <img
                     class="footer__vector-logo"
@@ -25,7 +25,7 @@ function mountFooter(domElToMount) {
               >
             </div>
             <div class="footer__link-container">
-              <a href="" class="footer__a-page-link">
+              <a href="./services.html" class="footer__a-page-link">
                 <div class="footer__logo-container">
                   <img
                     id="vector-services-a"
@@ -44,7 +44,7 @@ function mountFooter(domElToMount) {
               >
             </div>
             <div class="footer__link-container">
-              <a href="" class="footer__a-page-link"
+              <a href="./contact.html" class="footer__a-page-link"
                 ><div class="footer__logo-container">
                   <img
                     class="footer__vector-logo"
