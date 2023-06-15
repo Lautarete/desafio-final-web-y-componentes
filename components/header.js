@@ -1,21 +1,55 @@
-//funcion para montar
+function completeHeaderOperation(domElToMount) {
+  function mountHeader(domElToMount) {
+    mountComponentOnElement(
+      domElToMount,
+      `
+    <header class="header">
+        <img src="./several/logo.png" alt="" class="logo" />
+        <button class="header__button">
+          <div class="header__rc"></div>
+          <div class="header__rc"></div>
+          <div class="header__rc"></div>
+        </button>
+        <div class="header__options-window">
+          <button class="header__options-window-button">
+            <img
+              class="header__options-window-vector"
+              src="./several/vector-close.svg"
+              alt=""
+            />
+          </button>
+          <ul class="header__options-window-ul">
+            <a href="" class="header__options-window-link">Portfolio</a>
+            <a href="" class="header__options-window-link">Servicios</a>
+            <a href="" class="header__options-window-link">Contacto</a>
+          </ul>
+        </div>
+      </header>
+    `
+    );
+  }
 
-function showOptionsWindow() {
-  const showWindowButtonEl = document.querySelector(".header__button");
-  const optionsWindowEl = document.querySelector(".header__options-window");
+  function showOptionsWindow() {
+    const showWindowButtonEl = document.querySelector(".header__button");
+    const optionsWindowEl = document.querySelector(".header__options-window");
 
-  showWindowButtonEl.addEventListener("click", (e) => {
-    optionsWindowEl.style.display = "block";
-  });
-}
+    showWindowButtonEl.addEventListener("click", (e) => {
+      optionsWindowEl.style.display = "block";
+    });
+  }
 
-function closeOptionsWindow() {
-  const closeWindowButtonEl = document.querySelector(
-    ".header__options-window-button"
-  );
-  const optionsWindowEl = document.querySelector(".header__options-window");
+  function closeOptionsWindow() {
+    const closeWindowButtonEl = document.querySelector(
+      ".header__options-window-button"
+    );
+    const optionsWindowEl = document.querySelector(".header__options-window");
 
-  closeWindowButtonEl.addEventListener("click", (e) => {
-    optionsWindowEl.style.display = "none";
-  });
+    closeWindowButtonEl.addEventListener("click", (e) => {
+      optionsWindowEl.style.display = "";
+    });
+  }
+
+  mountHeader(domElToMount);
+  showOptionsWindow();
+  closeOptionsWindow();
 }
