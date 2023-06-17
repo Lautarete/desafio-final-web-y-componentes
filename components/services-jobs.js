@@ -6,7 +6,7 @@ function mountServicesJobs(domElToMount, cardClass) {
       <div class="services-jobs__img-container">
         <img
           class="services-jobs__img"
-          src="https://picsum.photos/623/415"
+          src=""
           alt=""
         />
       </div>

@@ -46,6 +46,10 @@
 }
 .services-jobs__card-title {
   margin: 25px 0;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 100%;
+  text-align: center;
 }
 .services-jobs__card-p {
   margin: 0;
@@ -56,7 +60,7 @@
   white-space: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 6;
 }
 @media (min-width: 840px) {
   .services-jobs__card-p {
